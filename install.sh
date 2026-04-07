@@ -19,18 +19,22 @@ case "$OS_TYPE" in
         ;;
     Linux)
         CHROME_STATE=~/.config/google-chrome/Local\ State
-        CHROME_PROCESS="chrome"
         ;;
     *)
-        echo "💡 Windows users, please run this PowerShell command instead:"
-        echo "irm https://raw.githubusercontent.com/user/Gemini-in-Chrome/main/install.ps1 | iex"
+        echo "❌ This script currently supports macOS and Linux only."
         exit 1
         ;;
 esac
 
 # Check if Chrome is running
 check_chrome_running() {
-    pgrep -x "$CHROME_PROCESS" > /dev/null 2>&1
+    if [[ "$OS_TYPE" == "Darwin" ]]; then
+        pgrep -x "$CHROME_PROCESS" > /dev/null 2>&1
+    else
+        pgrep -x chrome > /dev/null 2>&1 || \
+        pgrep -x google-chrome > /dev/null 2>&1 || \
+        pgrep -f 'google-chrome-stable' > /dev/null 2>&1
+    fi
 }
 
 if check_chrome_running; then

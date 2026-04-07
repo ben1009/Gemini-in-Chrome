@@ -7,15 +7,7 @@ One-click script to enable Chrome's built-in Gemini AI features for non-US users
 ### macOS / Linux
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/appsail/Gemini-in-Chrome/main/install.sh | bash
-```
-
-### Windows
-
-Open PowerShell and run:
-
-```powershell
-irm https://raw.githubusercontent.com/appsail/Gemini-in-Chrome/main/install.ps1 | iex
+curl -fsSL https://raw.githubusercontent.com/ben1009/Gemini-in-Chrome/main/install.sh | bash
 ```
 
 ## What It Does
@@ -42,12 +34,6 @@ mv ~/.config/google-chrome/Local\ State.bak \
    ~/.config/google-chrome/Local\ State
 ```
 
-**Windows PowerShell:**
-```powershell
-Move-Item -Path "$env:LOCALAPPDATA\Google\Chrome\User Data\Local State.bak" `
-          -Destination "$env:LOCALAPPDATA\Google\Chrome\User Data\Local State" -Force
-```
-
 ## Safety
 
 - Original config is backed up before any changes
@@ -62,11 +48,10 @@ Move-Item -Path "$env:LOCALAPPDATA\Google\Chrome\User Data\Local State.bak" `
 |----|------|
 | macOS | `~/Library/Application Support/Google/Chrome/Local State` |
 | Linux | `~/.config/google-chrome/Local State` |
-| Windows | `%LOCALAPPDATA%\Google\Chrome\User Data\Local State` |
 
 ## Issues
 
-Found a bug? [Open an issue](https://github.com/appsail/Gemini-in-Chrome/issues).
+Found a bug? [Open an issue](https://github.com/ben1009/Gemini-in-Chrome/issues).
 
 ## License
 

@@ -31,8 +31,9 @@ check_chrome_running() {
     if [[ "$OS_TYPE" == "Darwin" ]]; then
         pgrep -x "$CHROME_PROCESS" > /dev/null 2>&1
     else
+        pgrep -x chrome > /dev/null 2>&1 || \
         pgrep -x google-chrome > /dev/null 2>&1 || \
-        pgrep -x google-chrome-stable > /dev/null 2>&1
+        pgrep -f 'google-chrome-stable' > /dev/null 2>&1
     fi
 }
 

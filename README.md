@@ -34,12 +34,6 @@ mv ~/.config/google-chrome/Local\ State.bak \
    ~/.config/google-chrome/Local\ State
 ```
 
-**Windows PowerShell:**
-```powershell
-Move-Item -Path "$env:LOCALAPPDATA\Google\Chrome\User Data\Local State.bak" `
-          -Destination "$env:LOCALAPPDATA\Google\Chrome\User Data\Local State" -Force
-```
-
 ## Safety
 
 - Original config is backed up before any changes

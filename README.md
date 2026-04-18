@@ -7,7 +7,7 @@ One-click script to enable Chrome's built-in Gemini AI features for non-US users
 ### macOS / Linux
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ben1009/Gemini-in-Chrome/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/ben1009/Gemini-in-Chrome/refs/heads/master/install.sh | bash
 ```
 
 ## What It Does
